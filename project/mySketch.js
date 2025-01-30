@@ -1,23 +1,28 @@
-let myMessage = "mermaids"
-let xLocation;
-let yLocation;
-let myFont;
+let myMessage = "press the right and left keys if you like tigers!"
+let myFont; 
 
 function preload(){
-  myFont = loadFont('MercyChristole.ttf')
+  myFont = loadFont("Tiger-Regular.otf")
 }
 
 function setup() {
   createCanvas(400, 400);
-
-}
-function draw() {
-  background(82, 255, 212);
+  background(203, 113, 25);
   noStroke();
-  fill(255, 161, 242);
-  textSize(50)
+  fill(0);
   textFont(myFont)
-  text(myMessage, xLocation, yLocation, 240);
-  xLocation = mouseX
-  yLocation = mouseY
+  textSize(20)
+  text(myMessage, 30, 50);
+}
+function draw() { 
+}
+
+function keyPressed(){
+  if(keyCode === LEFT_ARROW){
+    fill("white")
+  }  
+  if(keyCode === RIGHT_ARROW){
+    fill(18, 9, 5)
+  }  
+  ellipse(random(0,400),random(0,400),300,10)  
 }
