@@ -4,8 +4,15 @@ let contents = "";
 
 let button
 let textBox; 
+let input2; 
 
 let topcolor,bottomcolor;
+
+let myFont;
+
+function preload(){
+  myFont = loadFont("Ferdinand.ttf")
+}
 
 function setup() {
   createCanvas(500, 400);
@@ -19,21 +26,24 @@ function setup() {
     stroke(newcolor);
     line(0,y,width, y);
   }
-}
-function draw () {
-
 
   button = createButton("show");
   button.position(220,80)
   button.mousePressed(showText)
   
-  textBox = createInput("type your answer here")
+  textBox = createInput("type here!")
   textBox.size(300,40)
   textBox.position(50,200)
   textBox.input(storeText)
+}
+function draw () {
+
+
+
 
  fill(255);
  textSize(14);
+ textFont(myFont)
  text(myQuestion,50,50)
   
 }
