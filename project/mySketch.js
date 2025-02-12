@@ -28,21 +28,20 @@ function setup() {
   }
 
   button = createButton("show");
-  button.position(220,80)
+  button.position(185, 245)
   button.mousePressed(showText)
   
   textBox = createInput("type here!")
-  textBox.size(300,40)
-  textBox.position(50,200)
+  textBox.size(250,30)
+  textBox.position(90,200)
   textBox.input(storeText)
 }
 function draw () {
 
 
 
-
  fill(255);
- textSize(14);
+ textSize(18);
  textFont(myFont)
  text(myQuestion,50,50)
   
